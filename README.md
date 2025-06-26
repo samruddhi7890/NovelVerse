@@ -4,9 +4,11 @@
 Translate and Culturally Adapt Light Novels to Hindi
 
 🚀 Overview:
+
 NovelVerse is a Python backend application for translating light novel chapters from English into Hindi, incorporating cultural adaptations like Indian character names and geographical locations. It supports managing multiple novel projects simultaneously, maintaining context for each. This project serves as the core translation engine, with future plans for full web and mobile UI integration.
 
 ✨ Key Features
+
 Chapter Translation: Translates pasted English chapter text into Hindi.
 
 Cultural Mapping: Automatically adapts foreign character names and locations to Indian equivalents, ensuring cultural relevance.
@@ -16,6 +18,7 @@ Story Continuation: Maintains narrative flow across chapters by leveraging cumul
 Multi-Story Support: Work on and manage multiple novel translation projects concurrently, each with dedicated storage.
 
 ⚙️ Setup and Installation
+
 Prerequisites: Python 3.x, Git (optional), and a Groq API Key.
 
 Clone/Download: Get the project files.
