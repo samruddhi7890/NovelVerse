@@ -1,5 +1,3 @@
-#two stories at once, better adaption with city mapping
-
 import json
 import re
 import os
@@ -9,7 +7,6 @@ from typing import Dict, Any, List, Tuple
 from langchain_groq import ChatGroq
 from langchain.schema import HumanMessage
 
-# --- Configuration (Modified for Multi-Story) ---
 ## NEW: Base directory to hold all stories
 STORIES_BASE_DIR = "stories"
 ## NEW: Standard filenames to be used within each story's directory
@@ -40,7 +37,7 @@ ANCIENT_INDIAN_CITIES = [
     "चेदि"         # Chedi
 ]
 
-# --- JSON Extraction Utility (No changes needed) ---
+
 def extract_json(text: str) -> Dict:
     """
     Extracts a JSON object from a string that might contain additional text or markdown.
@@ -72,7 +69,7 @@ def extract_json(text: str) -> Dict:
         print("   This often happens if the model doesn't follow instructions. Returning an empty dictionary.")
         return {}
 
-# --- Context Management (MODIFIED for Multi-Story) ---
+
 def load_context(story_path: str) -> Dict:
     """Loads the story context from the context file within a specific story's directory."""
     context_file = os.path.join(story_path, CONTEXT_FILENAME)
@@ -107,7 +104,7 @@ def append_to_full_story(chapter_number: int, hindi_story: str, story_path: str)
     print(f"✅ Chapter {chapter_number} appended to '{full_story_file}'.")
 
 
-# --- Supervisor and Worker Classes (No changes needed) ---
+# --- Supervisor and Worker Classes---
 class Supervisor:
     def __init__(self, supervisor_name: str, supervisor_prompt: str, model: Any):
         self.name = supervisor_name
@@ -196,9 +193,6 @@ EXAMPLE JSON STRUCTURE:
     "locations": ["Tokyo", "Kyoto", "Shibuya District"]
 }"""
 
-# ##############################################################################
-# ## MODIFIED PROMPT: Enhanced for better visualization and punctuation
-# ##############################################################################
 adaptation_prompt = """You are a master Hindi novelist and screenwriter. Your mission is to transform a simple chapter into a vivid, cinematic, and emotionally resonant narrative for Indian readers. Your writing must be grammatically flawless and rich with descriptive detail.
 
 **YOUR ROLE IS TO BE A STORYTELLER, NOT A TRANSLATOR. BREATHE LIFE INTO THE SCENE.**
@@ -270,9 +264,7 @@ workers = {
     "naming": Worker("Name Suggester", naming_prompt, supervisor),
     "context_updater": Worker("Context Updater", context_updater_prompt, supervisor)
 }
-
-# The rest of the file remains unchanged.
-# ... (all functions from get_user_text() to main() are the same)
+#Handles user input for pasting chapter content.
 def get_user_text() -> str:
     print("\nPaste the English version of the new chapter (Ctrl+Z then Enter on Windows, Ctrl+D then Enter on Unix):")
     lines = []
@@ -313,12 +305,12 @@ def filter_new_human_characters(new_chars: List[Dict], existing_chars: List[Dict
             new_human_characters.append(char)
     return new_human_characters
 
-# NEW: Function to filter new locations
+# Function to filter new locations
 def filter_new_locations(new_locations: List[str], existing_mapping: Dict[str, str]) -> List[str]:
     """Filters for locations that haven't been mapped yet."""
     return [loc for loc in new_locations if loc and loc not in existing_mapping]
 
-# NEW: Function to display mapping changes
+# Function to display mapping changes
 def print_mapping_summary(name_mapping: Dict[str, str], city_mapping: Dict[str, str], chapter_num: int):
     """Prints a summary of all name and city mappings used in this chapter."""
     print(f"\n🗺️ MAPPING SUMMARY (Chapter {chapter_num}):")
@@ -337,7 +329,7 @@ def print_mapping_summary(name_mapping: Dict[str, str], city_mapping: Dict[str, 
     if not name_mapping and not city_mapping:
         print("   No mappings needed for this chapter.")
 
-# --- Enhanced Pipeline with Single City Mapping ---
+# The central orchestration function. It calls various workers, handles character/city mapping interactions, updates context, and returns the translated chapter.
 def run_pipeline(text: str, context: Dict) -> Tuple[str, Dict]:
     context["chapter_count"] += 1
     chapter_num = context["chapter_count"]
