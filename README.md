@@ -24,6 +24,7 @@ Prerequisites: Python 3.x, Git (optional), and a Groq API Key.
 Clone/Download: Get the project files.
 
 git clone https://github.com/samruddhi7890/NovelVerse.git
+
 cd NovelVerse
 
 Virtual Environment: Create and activate a Python virtual environment.
@@ -46,7 +47,8 @@ GROQ_API_KEY="your_actual_groq_api_key_here"
 
 (This file is ignored by Git for security.)
 
-🚀 Usage
+🚀 Usage:
+
 Activate your virtual environment.
 
 Run the script:
@@ -63,7 +65,8 @@ Interactively select Indian names for new characters and a primary Indian city f
 
 Translated Hindi chapters will be displayed in the console and saved to stories/<your_story_name>/full_hindi_story.txt.
 
-🛣️ Future Enhancements
+🛣️ Future Enhancements:
+
 Improve translation quality through user feedback (LLM fine-tuning).
 
 Develop full web and mobile user interfaces.
