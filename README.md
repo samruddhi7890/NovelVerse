@@ -3,7 +3,7 @@
 📖 NovelVerse: Multi-Story Indian Context Creator 📖
 Translate and Culturally Adapt Light Novels to Hindi
 
-🚀 Overview
+🚀 Overview:
 NovelVerse is a Python backend application for translating light novel chapters from English into Hindi, incorporating cultural adaptations like Indian character names and geographical locations. It supports managing multiple novel projects simultaneously, maintaining context for each. This project serves as the core translation engine, with future plans for full web and mobile UI integration.
 
 ✨ Key Features
