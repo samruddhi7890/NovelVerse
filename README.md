@@ -1,6 +1,7 @@
 # NovelVerse
 
 📖 NovelVerse: Multi-Story Indian Context Creator 📖
+
 Translate and Culturally Adapt Light Novels to Hindi
 
 🚀 Overview:
