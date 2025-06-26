@@ -1,0 +1,47 @@
+{
+    "chapter_count": 1,
+    "name_mapping": {
+        "Lin Yuan": "Rohan Jain",
+        "Auntie Zhang": "Nalini Sharma"
+    },
+    "primary_indian_city": "पाटलिपुत्र",
+    "city_mapping": {
+        "Lin Yuan's store": "पाटलिपुत्र",
+        "Auntie Zhang's home": "पाटलिपुत्र"
+    },
+    "cumulative_summary": "This is the beginning of the story. Lin Yuan, a frail-looking youth, tends to his fey store with the help of his pets, Genius the Hundred Questions Beast and Chimey the Sound Bird, where he cares for the Jasmine Lilies, a common healing-type fey plant, and reflects on the rarity of low-grade feys evolving into high-grade ones.",
+    "all_characters": [
+        {
+            "name": "Lin Yuan",
+            "role": "Protagonist",
+            "personality": "Frail-looking, resourceful",
+            "gender": "male",
+            "species": "human",
+            "relationship_to_protagonist": "himself"
+        },
+        {
+            "name": "Genius",
+            "role": "Hundred Questions Beast, Housekeeping Beast",
+            "personality": "Coquettish, sweet",
+            "gender": "unknown",
+            "species": "Hundred Questions Beast",
+            "relationship_to_protagonist": "pet"
+        },
+        {
+            "name": "Chimey",
+            "role": "Sound Bird",
+            "personality": "Lively, confident",
+            "gender": "unknown",
+            "species": "Sound Bird",
+            "relationship_to_protagonist": "pet"
+        },
+        {
+            "name": "Auntie Zhang",
+            "role": "Neighbor",
+            "personality": "Unknown",
+            "gender": "female",
+            "species": "human",
+            "relationship_to_protagonist": "neighbor"
+        }
+    ]
+}
