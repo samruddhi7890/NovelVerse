@@ -27,7 +27,11 @@ Virtual Environment: Create and activate a Python virtual environment.
 
 python -m venv .venv
 
-# Activate: source .venv/bin/activate (macOS/Linux) OR .venv\Scripts\activate (Windows)
+Activate:
+
+macOS / Linux: source .venv/bin/activate
+
+Windows: .\.venv\Scripts\activate
 
 Install Dependencies:
 
@@ -42,7 +46,9 @@ GROQ_API_KEY="your_actual_groq_api_key_here"
 🚀 Usage
 Activate your virtual environment.
 
-Run the script: python app.py
+Run the script:
+
+python app.py
 
 Follow Console Prompts:
 
@@ -64,5 +70,3 @@ Integrate database for more robust data management.
 Implement user authentication, community features, and content organization.
 
 Plan for live deployment.
-
-Developed with ❤️ in VS Code.
