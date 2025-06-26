@@ -65,10 +65,4 @@ Implement user authentication, community features, and content organization.
 
 Plan for live deployment.
 
-🤝 Contributing
-Contributions are welcome!
-
-📄 License
-This project is open-source. (Consider adding a LICENSE file for explicit details.)
-
 Developed with ❤️ in VS Code.
